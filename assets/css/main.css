@@ -32,6 +32,7 @@
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #2A46FF;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent0-color: #2d3da1;
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
@@ -423,7 +424,7 @@ h6 {
   }
 
   .navmenu ul {
-    height: 35%;
+    height: 40%;
     display: none;
     list-style: none;
     position: absolute;
@@ -1486,6 +1487,7 @@ section,
 }
 
 .home-about .about-content .lead-text {
+  padding: 20px;
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.7;
@@ -1495,6 +1497,7 @@ section,
 }
 
 .home-about .about-content p {
+  padding: 20px;
   font-size: 1.1rem;
   line-height: 1.8;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -1856,6 +1859,19 @@ section,
   transform: scale(1.08);
 }
 
+/* 2. Configura o card como um container flexível vertical */
+.department-highlight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  /* ou o padding que você já estiver usando */
+  background: #fff;
+  /* exemplo */
+  border-radius: 10px;
+  text-align: center;
+}
+
 .featured-departments .department-highlight {
   background: var(--surface-color);
   border-radius: 16px;
@@ -1902,6 +1918,8 @@ section,
 }
 
 .featured-departments .highlight-list {
+  flex-grow: 1;
+  /* Isso empurra tudo o que estiver abaixo para o rodapé do card */
   list-style: none;
   padding: 0;
   margin: 0 0 30px 0;
@@ -1921,7 +1939,19 @@ section,
   margin-right: 10px;
 }
 
+/* 1. Faz todos os cards da mesma linha terem a mesma altura */
+.featured-departments .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured-departments .col-lg-4 {
+  display: flex;
+}
+
 .featured-departments .highlight-cta {
+  margin-top: auto;
+  /* Reforça que o botão fique no final */
   color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
@@ -1929,10 +1959,11 @@ section,
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: inline-block;
 }
 
 .featured-departments .highlight-cta:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: color-mix(in srgb, var(--accent0-color), transparent 20%);
 }
 
 .featured-departments .emergency-banner {
@@ -1960,21 +1991,40 @@ section,
 .featured-departments .emergency-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  margin-left: 25%;
   gap: 12px;
-  background: var(--contrast-color);
-  color: var(--accent-color);
-  padding: 16px 30px;
-  border-radius: 50px;
+  background-color: #ffffff;
+  /* Fundo branco para contrastar com o azul */
+  color: #0d6efd !important;
+  /* Texto no azul da marca */
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  border-radius: 50px;
+  /* Formato arredondado 'pill' */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  margin-top: 20px;
+}
+
+/* Efeito de Seta/Ícone e Hover */
+.emergency-btn i {
+  transition: transform 0.3s ease-in-out;
+  /* Transição de ida e volta do ícone */
 }
 
 .featured-departments .emergency-btn:hover {
-  background: color-mix(in srgb, var(--contrast-color), transparent 10%);
-  transform: translateY(-2px);
-  color: var(--accent-color);
+  transform: scale(1.05);
+  /* Aumenta levemente */
+  background-color: #ececec;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-contate-nos:hover i {
+  transform: rotate(15deg) scale(1.2);
+  /* O telefone dá uma leve 'tremida' de animação */
 }
 
 .featured-departments .emergency-btn i {
@@ -2297,7 +2347,7 @@ section,
 }
 
 .featured-services .specialty-content span {
-  font-size: 12px;
+  font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   line-height: 1.5;
 }
@@ -2429,7 +2479,7 @@ section,
 }
 
 .iti--separate-dial-code .iti__selected-flag {
-    background: transparent !important;
+  background: transparent !important;
 }
 
 .find-a-doctor .search-section .search-form .form-control,
@@ -2550,6 +2600,7 @@ section,
   font-weight: 500;
   color: var(--heading-color);
   margin-bottom: 0.5rem;
+  margin-top: 3%;
   line-height: 1.3;
 }
 
@@ -2621,6 +2672,72 @@ section,
   text-decoration: none;
   transition: all 0.3s ease;
   border: 1px solid;
+}
+
+.btn-instagram0 {
+  display: inline-block;
+  background-color: var(--accent-color);
+  /* Azul vibrante baseado na imagem do botão */
+  color: #ffffff !important;
+  /* Texto branco */
+  padding: 12px 35px;
+  /* Espaçamento interno para dar corpo ao botão */
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  /* Remove o sublinhado */
+  border-radius: 15px;
+  /* Cantos arredondados como o 'Book Now' */
+  transition: all 0.3s ease;
+  /* Efeito suave ao passar o mouse */
+  border: none;
+  text-align: center;
+}
+
+/* Efeito de Hover (passar o mouse) */
+.btn-instagram0:hover {
+  background-color: #0b5ed7;
+  /* Um azul levemente mais escuro */
+  transform: translateY(-2px);
+  /* Leve subida para feedback visual */
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--accent-color);
+  /* Azul Book Now */
+  color: #ffffff !important;
+  padding: 12px 30px;
+  padding-left: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* ESTA É A CHAVE: A transição no 'i' garante que ela volte suavemente */
+.btn-instagram i {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de hover no botão */
+.btn-instagram:hover {
+  padding-right: 37px;
+  padding-left: 33px;
+  background-color: #0b5ed7;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+}
+
+/* Movimento da seta na ida */
+.btn-instagram:hover i {
+  transition: 0.3s ease-in-out;
+  transform: translateX(8px);
 }
 
 .find-a-doctor .doctor-profile .action-buttons .btn-secondary:hover,
@@ -2737,6 +2854,7 @@ section,
 
   .find-a-doctor .doctor-profile .profile-header .doctor-details h4 {
     font-size: 1.04rem;
+    margin-top: 3%;
   }
 
   .find-a-doctor .doctor-profile .action-buttons {
@@ -3948,6 +4066,7 @@ section,
 }
 
 .department-details .expert-care-section {
+  padding: 20px;
   margin-top: 6rem;
 }
 
@@ -3955,6 +4074,67 @@ section,
   width: 100%;
   height: auto;
   border-radius: 0;
+}
+
+.img-fluid0 {
+  max-width: 90%;
+  height: auto;
+  border-radius: 50px;
+  /* Opcional: arredonda as bordas como na imagem */
+  display: block;
+}
+
+/* Ajustes específicos para Mobile (telas menores que 992px) */
+@media (max-width: 991.98px) {
+  .lead {
+    margin-right: -200px;
+  }
+
+  .expert-care-section {
+    padding: 0 20px;
+    /* Evita que o conteúdo cole nas laterais da tela */
+  }
+
+  .expert-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    /* Espaço entre a imagem e o texto abaixo */
+  }
+
+  .img-fluid0 {
+    width: 80%;
+    /* Reduz um pouco o tamanho no mobile para não sufocar */
+    margin: 0 auto;
+  }
+
+  .expert-content {
+    text-align: center;
+    /* Opcional: centraliza o texto no mobile */
+    padding: 0 10px;
+  }
+
+  .expertise-item {
+    justify-content: center;
+    /* Centraliza os itens da lista se necessário */
+    text-align: left;
+    /* Mantém o texto da lista alinhado à esquerda */
+  }
+}
+
+/* Espaçamento geral para Desktop */
+@media (min-width: 992px) {
+  .img-fluid0 {
+    margin-right: 40px;
+    /* Isso cria o espaço exato entre a imagem e o início do texto */
+    max-width: 85%;
+    /* Diminui um pouco a imagem para ela "flutuar" melhor no meio */
+  }
+
+  .expert-image {
+    padding: 20px;
+    /* Afasta a imagem da borda da coluna */
+  }
 }
 
 .department-details .expert-care-section .expert-content {
@@ -4245,6 +4425,13 @@ section,
   margin-bottom: 1.5rem;
   font-weight: 700;
   line-height: 1.15;
+}
+
+.lead {
+  font-size: 1.23rem;
+  font-weight: 300;
+  text-align: justify;
+  padding-right: 200px;
 }
 
 @media (max-width: 768px) {
