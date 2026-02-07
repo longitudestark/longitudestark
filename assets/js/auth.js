@@ -34,7 +34,9 @@ form.addEventListener('submit', (e) => {
         tel: `+${iti.getSelectedCountryData().dialCode} ${document.getElementById('signupTel').value}`,
         cidade: document.getElementById('signupCity').value,
         interesse: document.getElementById('signupInterest').value,
-        renda: document.getElementById('signupIncome').value
+        modalidade: document.getElementById('signupModality').value,
+        renda: document.getElementById('signupIncome').value,
+        estadocivil: document.getElementById('signupStatus').value
     };
 
     // Monta o resumo que aparece dentro do modal
@@ -45,7 +47,9 @@ form.addEventListener('submit', (e) => {
             <p><strong>Telefone:</strong> ${dadosTemporarios.tel}</p>
             <p><strong>Cidade:</strong> ${dadosTemporarios.cidade}</p>
             <p><strong>Interesse:</strong> ${dadosTemporarios.interesse}</p>
+            <p><strong>Modalidade:</strong> ${dadosTemporarios.modalidade}</p>
             <p><strong>Renda:</strong> ${dadosTemporarios.renda}</p>
+            <p><strong>Estado Civil:</strong> ${dadosTemporarios.estadocivil}</p>
         </div>
     `;
 
