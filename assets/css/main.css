@@ -1284,6 +1284,11 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero .hero-visual .main-image img:hover {
+  transform: scale(1.02);
 }
 
 .hero .hero-visual .main-image .floating-card {
@@ -4216,6 +4221,11 @@ section,
   border-radius: 50px;
   /* Opcional: arredonda as bordas como na imagem */
   display: block;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.img-fluid0:hover {
+  transform: scale(1.02);
 }
 
 /* Ajustes específicos para Mobile (telas menores que 992px) */
