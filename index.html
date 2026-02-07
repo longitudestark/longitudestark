@@ -75,8 +75,8 @@
           <ul>
             <li><a href="#" id="hero">Home</a></li>
             <li><a href="#about" id="#about">Sobre Nós</a></li>
+            <li><a href="#informativo" id="#informativo">Trending</a></li>
             <li><a href="#home-about" id="#home-about">Minha Casa Minha Vida</a></li>
-            <li><a href="#featured-services" id="#featured-services">Como Funciona</a></li>
             <li><a href="#featured-departments" id="#featured-departments">Empreendimentos</a></li>
             <li><a href="#find-a-doctor" id="#find-a-doctor">Por que comprar com a gente</a></li>
             <li><a href="#contact" id="#contact">Contato</a></li>
@@ -249,7 +249,92 @@
 
     <!-- End About Section -->
 
+    <!-- Information Section -->
 
+    <section id="informativo" class="informativo section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Fique por Dentro</h2>
+        <p>Notícias e dicas exclusivas da Equipe Stark</p>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="swiper swiper-noticias">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="news-card" onclick="abrirNoticia('mcmv')"
+                style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-mcmv.jpeg');">
+                <div class="news-content">
+                  <span class="news-category">Governo · Minha Casa Minha Vida</span>
+                  <h3 class="news-title">Novas regras do MCMV em 2026: Veja o que mudou</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="news-card" onclick="abrirNoticia('sbpe')"
+                style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-sbpe.jpeg');">
+                <div class="news-content">
+                  <span class="news-category">Governo · SBPE</span>
+                  <h3 class="news-title">Não se encaixa no “Minha Casa, Minha Vida”?</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="news-card" onclick="abrirNoticia('entrada')"
+                style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-entrada.jpeg');">
+                <div class="news-content">
+                  <span class="news-category">Finanças · Entrada Facilitada</span>
+                  <h3 class="news-title">Como parcelar sua entrada em até 60x sem juros</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="news-card" onclick="abrirNoticia('feirao')"
+                style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-limpanome.jpeg');">
+                <div class="news-content">
+                  <span class="news-category">Crédito · Feirão Limpa Nome</span>
+                  <h3 class="news-title">Feirão Limpa Nome: Recupere seu crédito agora</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="news-card" onclick="abrirNoticia('fgts')"
+                style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-fgts.jpeg');">
+                <div class="news-content">
+                  <span class="news-category">Dicas · FGTS</span>
+                  <h3 class="news-title">Passo a passo para usar seu FGTS na compra</h3>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="noticiaModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-noticia">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 pt-0">
+            <div id="noticiaConteudo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Information Section -->
 
     <!-- Home About Section -->
     <section id="home-about" class="home-about section">
@@ -323,7 +408,7 @@
     </section><!-- /Home About Section -->
 
     <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section">
+    <section id="home-about" class="featured-services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -342,9 +427,11 @@
                 <br><br><br>
                 <img src="assets/img/minhacasaminhavida.jpg" alt="Premier Healthcare Services"
                   class="img=mcmv img-fluid" loading="lazy">
+                <div class="service-overlay">
                   <div class="service-badge">
                     <i class="bi bi-people"></i>
                     <span>Minha Casa Minha Vida</span>
+                  </div>
                 </div>
               </div>
               <div class="service-details">
@@ -394,6 +481,7 @@
 
         <div class="specialties-grid" data-aos="fade-up" data-aos-delay="300">
           <div class="row align-items-center">
+            
 
             <div class="col-lg-3 col-md-6">
               <div class="specialty-card">
@@ -736,14 +824,14 @@
                     <input type="tel" class="form-control" name="tel" id="signupTel" placeholder="Telefone" required="">
                   </div>
 
-                  <div class="col-12">
+                  <div class="col-md-6">
                     <input type="text" class="form-control" name="cidade" id="signupCity" placeholder="Sua Cidade"
                       required="">
                   </div>
 
-                  <div class="col-12">
+                  <div class="col-md-6">
                     <select class="form-select" name="interesse" id="signupInterest" required="">
-                      <option value="">Informe o Local de Interesse</option>
+                      <option value="">Cidade de Interesse</option>
                       <option value="Sumaré">Sumaré</option>
                       <option value="Hortolândia">Hortolândia</option>
                       <option value="Monte Mor">Monte Mor</option>
@@ -759,14 +847,32 @@
                     </select>
                   </div>
 
-                  <div class="col-12">
+                  <div class="col-md-6">
+                    <select class="form-select" name="modalidade" id="signupModality" required="">
+                      <option value="">Modalidade de Trabalho</option>
+                      <option value="Carteira Assinada">Carteira Assinada</option>
+                      <option value="Autônomo(a)">Autônomo(a)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
                     <select class="form-select" name="renda" id="signupIncome" required="">
-                      <option value="">Informe sua Renda Mensal</option>
+                      <option value="">Renda Mensal</option>
                       <option value="Faixa 1">Até R$ 2.850</option>
                       <option value="Faixa 2">R$ 2.850,01 a R$ 4.700,00</option>
                       <option value="Faixa 3">R$ 4.700,01 a R$ 8.600,00</option>
                       <option value="Faixa 4">R$ 8.600,01 a R$ 12.000,00</option>
                       <option value="Mais">Mais de R$ 12.000,00</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <select class="form-select" name="estadocivil" id="signupStatus" required="">
+                      <option value="">Estado Civil</option>
+                      <option value="Solteiro(a)">Solteiro(a)</option>
+                      <option value="Casado(a)">Casado(a)</option>
+                      <option value="Divorciado(a)">Divorciado(a)</option>
+                      <option value="Viúvo(a)">Viúvo(a)</option>
                     </select>
                   </div>
 
