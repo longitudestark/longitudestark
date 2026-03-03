@@ -1608,6 +1608,7 @@ section,
 # Home About Section
 --------------------------------------------------------------*/
 .home-about {
+  margin-top: 5%;
   padding: 100px 0;
   background-color: var(--surface-color);
 }
@@ -2813,6 +2814,17 @@ section,
   border: 1px solid;
 }
 
+.instagram-content {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente (se necessário) */
+  width: 100%;
+  /* Garante que o container ocupe a largura toda */
+}
+
 .btn-instagram0 {
   display: inline-block;
   background-color: var(--accent-color);
@@ -2831,6 +2843,7 @@ section,
   /* Efeito suave ao passar o mouse */
   border: none;
   text-align: center;
+  justify-content: center;
 }
 
 /* Efeito de Hover (passar o mouse) */
