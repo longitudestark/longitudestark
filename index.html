@@ -35,6 +35,13 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 
+  <script>
+    window.onload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
@@ -52,11 +59,11 @@
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>+55 19 98244-4193</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
-          <a href="https://wa.me/5519982444193"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://wa.me/5519982444193" target="tabwhatsapp"><i class="bi bi-whatsapp"></i></a>
           <!-- <a href="#!" class="facebook"><i class="bi bi-facebook"></i></a> -->
           <a href="https://www.instagram.com/longitude_stark?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-            class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/bruna-agostini-3549a6119" class="linkedin"><i
+            class="instagram" target="tabinstagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/bruna-agostini-3549a6119" class="linkedin" target="tablinkedin"><i
               class="bi bi-linkedin"></i></a>
         </div>
       </div>
@@ -76,7 +83,6 @@
             <li><a href="#" id="hero">Home</a></li>
             <li><a href="#about" id="#about">Sobre Nós</a></li>
             <li><a href="#informativo" id="#informativo">Trending</a></li>
-            <li><a href="#home-about" id="#home-about">Minha Casa Minha Vida</a></li>
             <li><a href="#featured-departments" id="#featured-departments">Empreendimentos</a></li>
             <li><a href="#find-a-doctor" id="#find-a-doctor">Por que comprar com a gente</a></li>
             <li><a href="#contact" id="#contact">Contato</a></li>
@@ -240,7 +246,7 @@
               </p>
               <br>
               <a href="https://www.instagram.com/longitude_stark?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                class="btn-instagram">Conheça o Nosso Trabalho <i class="bi bi-arrow-right"></i></a>
+                class="btn-instagram" target="tabinstagram">Conheça o Nosso Trabalho <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -266,7 +272,7 @@
                 style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-mcmv.jpeg');">
                 <div class="news-content">
                   <span class="news-category">Governo · Minha Casa Minha Vida</span>
-                  <h3 class="news-title">Novas regras do MCMV em 2026: Veja o que mudou</h3>
+                  <h3 class="news-title">Como Sair do Aluguel e Conquistar seu Apartamento?</h3>
                 </div>
               </div>
             </div>
@@ -275,8 +281,8 @@
               <div class="news-card" onclick="abrirNoticia('sbpe')"
                 style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-sbpe.jpeg');">
                 <div class="news-content">
-                  <span class="news-category">Governo · SBPE</span>
-                  <h3 class="news-title">Não se encaixa no “Minha Casa, Minha Vida”?</h3>
+                  <span class="news-category">Empreendedorismo · SBPE</span>
+                  <h3 class="news-title">Não se Encaixa no “Minha Casa, Minha Vida”?</h3>
                 </div>
               </div>
             </div>
@@ -286,17 +292,18 @@
                 style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-entrada.jpeg');">
                 <div class="news-content">
                   <span class="news-category">Finanças · Entrada Facilitada</span>
-                  <h3 class="news-title">Como parcelar sua entrada em até 60x sem juros</h3>
+                  <h3 class="news-title">Não Possui Dinheiro Guardado? Entrada Facilitada em 82x
+</h3>
                 </div>
               </div>
             </div>
 
             <div class="swiper-slide">
-              <div class="news-card" onclick="abrirNoticia('feirao')"
-                style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-limpanome.jpeg');">
+              <div class="news-card" onclick="abrirNoticia('empurraozinho')"
+                style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-empurraozinho.jpeg');">
                 <div class="news-content">
-                  <span class="news-category">Crédito · Feirão Limpa Nome</span>
-                  <h3 class="news-title">Feirão Limpa Nome: Recupere seu crédito agora</h3>
+                  <span class="news-category">Acessibilidade · "Empurrãozinho"</span>
+                  <h3 class="news-title">O "Empurrãozinho" que Falta para sua Casa Própria</h3>
                 </div>
               </div>
             </div>
@@ -306,7 +313,7 @@
                 style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%), url('assets/img/informativo-fgts.jpeg');">
                 <div class="news-content">
                   <span class="news-category">Dicas · FGTS</span>
-                  <h3 class="news-title">Passo a passo para usar seu FGTS na compra</h3>
+                  <h3 class="news-title">Como Utilizar seu FGTS na Realização do seu Sonho</h3>
                 </div>
               </div>
             </div>
@@ -316,6 +323,9 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
+        </div>
+        <div class="instagram-content">
+          <a href="mcmv.html" class="btn-instagram0">Saber Mais</a>
         </div>
       </div>
     </section>
@@ -335,216 +345,6 @@
     </div>
 
     <!-- End Information Section -->
-
-    <!-- Home About Section -->
-    <section id="home-about" class="home-about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
-            <div class="about-content">
-              <h2 class="section-heading">Mais de 1 milhão de brasileiros com o novo Minha Casa, Minha Vida. </h2>
-              <p class="lead-text">O Programa Minha Casa, Minha Vida facilita o acesso à casa própria por meio de
-                subsídios e condições especiais de financiamento, permitindo que milhares de famílias realizem o sonho
-                da moradia com segurança e qualidade de vida.</p>
-
-              <p>A Longitude Incorporadora desenvolve empreendimentos alinhados ao Minha Casa, Minha Vida, com projetos
-                bem planejados, boa localização e foco em conforto, contribuindo para a realização do sonho da casa
-                própria em todo o Brasil.</p>
-
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="10000"
-                    data-purecounter-duration="1"></div>
-                  <div class="stat-label">Unidades</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="30"
-                    data-purecounter-duration="1"></div>
-                  <div class="stat-label">Empreendimentos</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="400"
-                    data-purecounter-duration="1"></div>
-                  <div class="stat-label">Colaboradores</div>
-                </div>
-              </div>
-
-              <div class="cta-section">
-                <a href="#contact" class="btn-primary">Entre em Contato Conosco</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-visual">
-              <div class="main-image">
-                <img src="assets/img/lumi_fachada.jpg" alt="Evo Portaria" class="img-fluid">
-              </div>
-              <div class="floating-card">
-                <div class="card-content">
-                  <div class="icon">
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="card-text">
-                    <h4>Lumi Residencial</h4>
-                    <p>Próximo à Havan</p>
-                  </div>
-                </div>
-              </div>
-              <div class="experience-badge">
-                <div class="badge-content">
-                  <span class="years">50%</span>
-                  <span class="text">Obras Concluídas</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Home About Section -->
-
-    <!-- Featured Services Section -->
-    <section id="home-about" class="featured-services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Como funciona o programa Minha Casa Minha Vida?</h2>
-        <p>O programa habitacional do Governo Federal evoluiu para facilitar ainda mais a conquista do seu imóvel
-          próprio.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-0">
-
-          <div class="col-lg-8" data-aos="fade-right" data-aos-delay="200">
-            <div class="featured-service-main">
-              <div class="service-image-wrapper">
-                <br><br><br>
-                <img src="assets/img/minhacasaminhavida.jpg" alt="Premier Healthcare Services"
-                  class="img=mcmv img-fluid" loading="lazy">
-                <div class="service-overlay">
-                  <div class="service-badge">
-                    <i class="bi bi-people"></i>
-                    <span>Minha Casa Minha Vida</span>
-                  </div>
-                </div>
-              </div>
-              <div class="service-details">
-                <br><br><br>
-                <h2>Veja as novas faixas de renda do programa:</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
-            <div class="services-sidebar">
-
-              <div class="service-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-icon-wrapper">
-                  <span alt="Maternal Care" class="img-fluid material-symbols-outlined" loading="lazy">counter_1</span>
-                </div>
-                <div class="service-info">
-                  <h4>Faixa 1</h4>
-                  <p>Renda familiar mensal de até R$ 2.850</p>
-                </div>
-              </div>
-
-              <div class="service-item" data-aos="fade-up" data-aos-delay="500">
-                <div class="service-icon-wrapper">
-                  <span alt="Maternal Care" class="img-fluid material-symbols-outlined" loading="lazy">counter_2</span>
-                </div>
-                <div class="service-info">
-                  <h4>Faixa 2</h4>
-                  <p>Renda familiar mensal de R$ 2.850,01 a R$ 4.400</p>
-                </div>
-              </div>
-
-              <div class="service-item" data-aos="fade-up" data-aos-delay="600">
-                <div class="service-icon-wrapper">
-                  <span alt="Maternal Care" class="img-fluid material-symbols-outlined" loading="lazy">counter_3</span>
-                </div>
-                <div class="service-info">
-                  <h4>Faixa 3</h4>
-                  <p>Renda familiar mensal de R$ 4.400,01 a R$ 8.000</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class="specialties-grid" data-aos="fade-up" data-aos-delay="300">
-          <div class="row align-items-center">
-            
-
-            <div class="col-lg-3 col-md-6">
-              <div class="specialty-card">
-                <div class="specialty-image">
-                  <br><span alt="Maternal Care" class="img-fluid material-symbols-outlined"
-                    loading="lazy">family_group</span>
-                </div>
-                <div class="specialty-content">
-                  <h5>Mais famílias contempladas</h5>
-                  <span>Agora, o programa atende quem tem renda de até R$ 8.000 por mês.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="specialty-card">
-                <div class="specialty-image">
-                  <br><span alt="Maternal Care" class="img-fluid material-symbols-outlined"
-                    loading="lazy">money_bag</span>
-                </div>
-                <div class="specialty-content">
-                  <h5>Faixa 1 de volta</h5>
-                  <span>Famílias com renda de até R$ 2.640 agora têm acesso a subsídios maiores e taxas de juros ainda
-                    menores.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="specialty-card">
-                <div class="specialty-image">
-                  <br><span alt="Maternal Care" class="img-fluid material-symbols-outlined" loading="lazy">wallet</span>
-                </div>
-                <div class="specialty-content">
-                  <h5>Parcelas mais baixas que o aluguel</h5>
-                  <span>Você pode financiar seu apê com condições que cabem no seu bolso.</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="specialty-card">
-                <div class="specialty-image">
-                  <br><span alt="Maternal Care" class="img-fluid material-symbols-outlined"
-                    loading="lazy">savings</span>
-                </div>
-                <div class="specialty-content">
-                  <h5>Uso do FGTS</h5>
-                  <span>Utilize seu saldo do FGTS para dar entrada ou diminuir as parcelas do financiamento.</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <br><br>
-          <div class="text-center">
-            <a href="#contact" class="btn-instagram0">Vem com a gente!</a>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Featured Services Section -->
 
     <!-- Featured Departments Section -->
     <section id="featured-departments" class="featured-departments section">
@@ -569,7 +369,7 @@
                 <li>Apartamentos bem distribuídos e funcionais.</li>
                 <li>Localização estratégica em Sumaré.</li>
               </ul>
-              <a href="https://maps.app.goo.gl/dTDyHqGR8A6LJWE36" class="highlight-cta">LOCALIZAÇÃO</a>
+              <a href="https://maps.app.goo.gl/dTDyHqGR8A6LJWE36" class="highlight-cta" target="tabicon">LOCALIZAÇÃO</a>
             </div>
           </div><!-- End Department Highlight -->
 
@@ -584,7 +384,7 @@
                 <li>Varanda que amplia o conforto do dia a dia.</li>
                 <li>Projeto moderno e exclusivo.</li>
               </ul>
-              <a href="https://maps.app.goo.gl/23S3HyQ4auALxtuQ8" class="highlight-cta">LOCALIZAÇÃO</a>
+              <a href="https://maps.app.goo.gl/23S3HyQ4auALxtuQ8" class="highlight-cta" target="tabone">LOCALIZAÇÃO</a>
             </div>
           </div><!-- End Department Highlight -->
 
@@ -601,7 +401,7 @@
                 <li>Apartamentos com varanda.</li>
                 <li>Fácil acesso a comércios e serviços.</li>
               </ul>
-              <a href="https://maps.app.goo.gl/T1QEYDgbkDYcnPhh6" class="highlight-cta">LOCALIZAÇÃO</a>
+              <a href="https://maps.app.goo.gl/T1QEYDgbkDYcnPhh6" class="highlight-cta" target="tabparqueamizade">LOCALIZAÇÃO</a>
             </div>
           </div><!-- End Department Highlight -->
 
@@ -615,7 +415,7 @@
                 <li>Lazer completo com espaços de convivência.</li>
                 <li>Excelente opção para sair do aluguel.</li>
               </ul>
-              <a href="https://maps.app.goo.gl/bxsytx3jZ8hhdsne8" class="highlight-cta">LOCALIZAÇÃO</a>
+              <a href="https://maps.app.goo.gl/bxsytx3jZ8hhdsne8" class="highlight-cta" target="tablumi">LOCALIZAÇÃO</a>
             </div>
           </div><!-- End Department Highlight -->
 
@@ -630,7 +430,7 @@
                 <li>Design moderno e funcional.</li>
               </ul>
               <br>
-              <a href="https://maps.app.goo.gl/3Miu54oHrZST95Ni8" class="highlight-cta">LOCALIZAÇÃO</a>
+              <a href="https://maps.app.goo.gl/3Miu54oHrZST95Ni8" class="highlight-cta" target="tabevo">LOCALIZAÇÃO</a>
             </div>
           </div><!-- End Department Highlight -->
 
@@ -644,7 +444,7 @@
                 <li>Plantas bem aproveitadas com varanda.</li>
                 <li>Ótimo custo-benefício.</li>
               </ul>
-              <a href="https://maps.app.goo.gl/rpC46CTAkHRBtx2R8" class="highlight-cta">LOCALIZAÇÃO</a>
+              <a href="https://maps.app.goo.gl/rpC46CTAkHRBtx2R8" class="highlight-cta" target="tabvox">LOCALIZAÇÃO</a>
             </div>
           </div><!-- End Department Highlight -->
 
@@ -999,6 +799,8 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/auth.js"></script>
+
+  </main>
 
 </body>
 
