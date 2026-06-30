@@ -83,12 +83,24 @@
 }
 
 .logo0 {
+  width: 55%;
+  border-radius: 15px;
+  /* Aplica o arredondamento direto na imagem */
+  display: block;
+  /* Garante que o navegador trate a imagem corretamente */
+  margin: 0 auto 30px;
+  /* Centraliza horizontalmente (auto) e dá margem embaixo */
+  text-align: center;
+  /* Garante o alinhamento em alguns navegadores */
+}
+
+.logo1 {
   width: 50%;
   border-radius: 15px;
   /* Aplica o arredondamento direto na imagem */
   display: block;
   /* Garante que o navegador trate a imagem corretamente */
-  margin: 0 auto 15px;
+  margin: 0 auto 0px;
   /* Centraliza horizontalmente (auto) e dá margem embaixo */
   text-align: center;
   /* Garante o alinhamento em alguns navegadores */
@@ -2243,7 +2255,7 @@ section,
 
 .featured-services .service-image-wrapper {
   position: relative;
-  height: 400px;
+  height: 545px;
   overflow: hidden;
   border-radius: 8px;
 }
